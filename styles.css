@@ -1,25 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-image: linear-gradient(to right, rgb(70, 52, 94) , rgb(30, 21, 42));
+}
+
 .calculator-body {
-    background-color: dimgray;
-    border: 3px solid black;
+    background-color: rgb(90, 177, 187);
     border-radius: 15px;
     width: 295px;
-
+    border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
-.display {
-    background-color: lightblue;
+.drop {
+    background-color: rgb(54, 125, 133);
+    width: 295px;
+    height: 452px;
+    border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 20px;
+}
+
+.display-main {
+    background-color: rgb(139, 197, 204);
     height: 110px;
     width: 275px;
-    border: 2px solid black;
+    border: 2px solid rgb(63, 139, 148);
     border-radius: 15px;
     margin-top: 12px;
-
+    margin-bottom: 12px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    gap: 4px;
+}
+
+.display-top,
+.display-bottom {
+    margin: 0 8px 8px 0;
 }
 
 tbody {
@@ -36,30 +60,63 @@ tr {
 }
 
 #power {
-    background-color: red;
+    background-color: rgb(30, 21, 42);
 }
 
 #clear {
-    background-color: red;
+    background-color: rgb(247, 221, 114);
 }
 
 #delete {
-    flex: 1;
-    background-color: aqua;
-}
-
-.button {
-    background-color: lightslategray;
-    border: 2px solid black;
-    border-radius: 15px;
-    height: 50px;
-    width: 50px;
+    background-color: rgb(165, 200, 130);
 }
 
 #power,
 #clear,
 #delete {
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-top: 12px;
+    border: none;
+    border-radius: 12px;
+}
+
+.first .power{
+    background-color: rgb(13, 9, 19);
+    border-radius: 12px;
+}
+
+.first .clear{
+    background-color: rgb(197, 174, 83);
+    border-radius: 12px;
+}
+
+.first .delete{
+    background-color: rgb(115, 146, 83);
+    border-radius: 12px;
+}
+
+.bottom {
+    border-radius: 12px;
+    background-color: rgb(49, 68, 67);
+}
+
+button {
+    background-color: rgb(78, 103, 102);
+    border: none;
+    border-radius: 12px;
+    height: 50px;
+    width: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-6px);
+    
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+button:active {
+    transform: translateY(-2px);
 }
