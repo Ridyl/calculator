@@ -8,6 +8,8 @@ let num2 = null;
 let answer = null;
 let operand = null;
 
+let continueOperation = null;
+
 // Adding an event listener for each button of the calculator
 // Will use ID of each button to determine value
 for(let i = 0; i < buttonSelect.length; i++) {
@@ -16,11 +18,7 @@ for(let i = 0; i < buttonSelect.length; i++) {
     buttonSelect[i].addEventListener('click', (e) => {
         buttonID = e.target.getAttribute('id');
         buttonClass = e.target.getAttribute('class');
-        if(answer == null) {
-            distribute(buttonID, buttonClass);
-        } else {
-            answer = null;
-            bottomDisplay.textContent = '';
+        if(continueOperation == null) {
             distribute(buttonID, buttonClass);
         }
     });
@@ -96,6 +94,7 @@ function abs(buttonID) {
     if (buttonID === 'clear') {
         bottomDisplay.textContent = '';
         topDisplay.textContent = '';
+        continueOperation = null;
     }
 
     if (buttonID === 'delete') {
