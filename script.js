@@ -10,6 +10,7 @@ let operand = null;
 
 let continueOperation = null;
 
+
 // Adding an event listener for each button of the calculator
 // Will use ID of each button to determine value
 for(let i = 0; i < buttonSelect.length; i++) {
@@ -82,13 +83,9 @@ function display(id) {
 //All extra function button uses.
 function abs(buttonID) {
     if (buttonID === 'power') {
-        // powerToggle(buttonClass);
-        bottomDisplay.textContent = 'Welcome';
+        topDisplay.textContent = "Created By:"
+        bottomDisplay.textContent = "Joey D'Alatri";
         setTimeout(hide, 2000);
-    } else if (buttonID === 'power') {
-        // powerToggle(buttonClass);
-        bottomDisplay.textContent = '';
-        topDisplay.textContent = '';
     }
 
     if (buttonID === 'clear') {
@@ -104,7 +101,10 @@ function abs(buttonID) {
 }
 
 //for welcome message timeout action.
-function hide() {bottomDisplay.textContent = '';}
+function hide() {
+    bottomDisplay.textContent = '';
+    topDisplay.textContent = '';
+}
 
 //all math operations
 function add(a, b) {return a + b;}
